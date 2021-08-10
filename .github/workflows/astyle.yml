@@ -1,32 +1,30 @@
-# Run code formatting
+# Run code formatting enforcer  1.00.01 DG. 8/10/21
 
 name: Artistic Style
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Controls when the action will run. 
+# Triggers the workflow on push or pull request events but only for the master branch
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "unit-test"
+  # This workflow contains  1 job called "unit-test" (?)
   astyle:
-    # The type of runner that the job will run on
+    #  type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    # Steps are a sequence of tasks that will be executed
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-                - uses: webfactory/ssh-agent@v0.5.3
-              with:
-                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
+    - uses: webfactory/ssh-agent@v0.5.3
+      with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - uses: actions/checkout@v2
 
-    # Install Artistic Style
     - name: Install Astyle
       run: |
           wget -q https://sourceforge.net/projects/astyle/files/astyle/astyle%203.1/astyle_3.1_linux.tar.gz/download -O astyle.tar.gz
@@ -38,11 +36,11 @@ jobs:
           make
           sudo make install
           cd ../../
+          pwd
 
-    # Run Artistic Style
     - name: Run Astyle
       run: make astyle
         
-    # Check output
+    # Use diff to show required changes
     - name: Check formatting
       run: git diff --exit-code --diff-filter=d --color
