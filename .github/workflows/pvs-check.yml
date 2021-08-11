@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: PVS-Studio-Check
 
 # Controls when the action will run. Triggers the workflow on push or pull request
@@ -18,9 +16,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-                - uses: webfactory/ssh-agent@v0.5.3
-              with:
-                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - uses: webfactory/ssh-agent@v0.5.3
+      with:
+           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - uses: actions/checkout@v2
 
@@ -42,7 +40,6 @@ jobs:
     - name: Run PVS Studio
       run: make pvs
 
-    # Error if pvs.error has content
     - name: Check PVS has no errors
       run: |
           if [[ $(wc -l < pvs.error) -gt 1 ]]
