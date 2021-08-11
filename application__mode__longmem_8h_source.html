@@ -86,7 +86,37 @@ $(document).ready(function(){initNavTree('application__mode__longmem_8h_source.h
 <div class="title">application_mode_longmem.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="application__mode__longmem_8h.html">Go to the documentation of this file.</a><div class="fragment"></div><!-- fragment --></div><!-- contents -->
+<a href="application__mode__longmem_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#ab112cf8d9e1546fe79159d1b8c32f2e3">   17</a></span>&#160;<span class="preprocessor">#define APP_FW_VARIANT  &quot;+longmem&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a6198c2c5512397bc756c6c52e2040024">   19</a></span>&#160;<span class="preprocessor">#define APP_LOG_INTERVAL_S (5U * 60u)         // 5 seconds. Less often that the default variant of</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a2f3b7fca220397a5c9ca7a2e4e336eaa">   21</a></span>&#160;<span class="preprocessor">#define no  0</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#ade1c73328c7fd9bbb990a2811a5182e5">   22</a></span>&#160;<span class="preprocessor">#define yes 1</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* Explicitly enable the included sensors */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#ae99c783515a2855670970a379bfde222">   25</a></span>&#160;<span class="preprocessor">#define RT_SENSOR_ENABLED           yes</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#deinfe APP_SENSOR_SHTCX_ENABLED    yes</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a50c2c57e022fb81bada80409e6f87365">   27</a></span>&#160;<span class="preprocessor">#define APP_SENSOR_LIS2DH12_ENABLED yes</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">/* Disable unused sensors */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// It seems that if sensor_xxx is not enabled, it should imply that RI_sensor  is also disabled  ?? (_)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a47feb6dc714e4a541e901420b9afc073">   33</a></span>&#160;<span class="preprocessor">#define APP_SENSOR_BME280_ENABLED               no</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#ade28ed24c83aeb15c586dc4fb1335290">   34</a></span>&#160;<span class="preprocessor">#define         RI_BME280_ENABLED               no    // Prefer SHTC</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#afa0e7731da552775cb16186293afd5d4">   35</a></span>&#160;<span class="preprocessor">#define APP_SENSOR_PHOTO_ENABLED                no</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a1a0b62d55a9671baadd0b53b9d2a657d">   36</a></span>&#160;<span class="preprocessor">#define     RI_ADC_PHOTO_ENABLED                no</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a661431d8cbfa192693b762bdd3983b90">   37</a></span>&#160;<span class="preprocessor">#define APP_SENSOR_NTC_ENABLED                  no</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a6b7de40913f80b6163eba5c0df8a6913">   38</a></span>&#160;<span class="preprocessor">#define     RI_ADC_NTC_ENABLED                  no</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a04483306f85efb4daf9095194454709c">   39</a></span>&#160;<span class="preprocessor">#define APP_SENSOR_TMP117_ENABLED               no</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a3fe9bbfb8863b5c0deeeee8641c75a50">   40</a></span>&#160;<span class="preprocessor">#define         RI_TMP117_ENABLED               no</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#ab5f2de54e947fe2921132f465c260f47">   41</a></span>&#160;<span class="preprocessor">#define APP_SENSOR_ENVIRONMENTAL_MCU_ENABLED    no</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a33c15aae27be510c5c2987daaa66f82c">   42</a></span>&#160;<span class="preprocessor">#define APP_SENSOR_DPS310_ENABLED               no</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="application__mode__longmem_8h.html#a9f40d84b3be7227706b9907b07958417">   43</a></span>&#160;<span class="preprocessor">#define         RI_DPS310_SPI_ENABLED           no</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// END</span></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
