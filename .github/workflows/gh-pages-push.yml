@@ -51,6 +51,7 @@ jobs:
           sudo apt-get install -qq pvs-studio
           pvs-studio-analyzer credentials  ${{ secrets.PVS_USERNAME }} ${{ secrets.PVS_KEY }}
 
+    - name: Run PVS Studio
       run: make pvs
 
     # Error if pvs.error has more than 1 output line
