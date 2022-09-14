@@ -1,4 +1,4 @@
-# ruuvi.firmware.c  somehow this is Private
+# ruuvi.firmware.c  somehow this is Private and doesn;t seem to be. a fork of Otso stuff
 Current git repository status:
 
 [![Build Status](https://jenkins.ruuvi.com/buildStatus/icon?job=ruuvi.firmware.c+-+deploy)](https://jenkins.ruuvi.com/job/ruuvi.firmware.c%20-%20deploy/)
