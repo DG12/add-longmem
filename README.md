@@ -1,4 +1,4 @@
-# ruuvi.firmware.c
+# ruuvi.firmware.c  somehow this is Private
 Current git repository status:
 
 [![Build Status](https://jenkins.ruuvi.com/buildStatus/icon?job=ruuvi.firmware.c+-+deploy)](https://jenkins.ruuvi.com/job/ruuvi.firmware.c%20-%20deploy/)
