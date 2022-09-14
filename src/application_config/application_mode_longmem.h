@@ -28,7 +28,7 @@
 
 /* Disable unused sensors */
 
-// It seems that if sensor_xxx is not enabled, it should imply that RI_sensor  is also disabled  ?? (_)
+// It seems that if sensor_xxx is not enabled, it should imply that RI_sensor is also disabled  ?? (_)
 
 #define APP_SENSOR_BME280_ENABLED               no
 #define         RI_BME280_ENABLED               no    // Prefer SHTC
