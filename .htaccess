@@ -1,0 +1,9 @@
+#  WARNING. error in this file can down the ENTIRE SITE!!  like:  ErrorDocument 599 12/31/07
+ErrorDocument 400 /00-Whoops.html
+ErrorDocument 401 /00-forbidden.html
+ErrorDocument 404  /00-docs-no-such.html
+#                      ^^^^
+ErrorDocument 403 /00-forbidden.html
+ErrorDocument 500 /500.cgi
+#ErrorDocument 500 " Sorry That is not available at this time, Please try later. 500"
+ErrorDocument 501 /00-Woops-501.html
